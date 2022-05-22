@@ -9,7 +9,10 @@ const TeamName = ({ formData, setFormData, page, setPage }) => {
 	};
 
 	return (
-		<div>
+		<div
+			style={{ height: '60vh' }}
+			className="d-flex flex-column justify-content-center align-items-center"
+		>
 			{adult && (
 				<Form>
 					<Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -28,7 +31,7 @@ const TeamName = ({ formData, setFormData, page, setPage }) => {
 					<h1>Team Name: {formData?.teamName}</h1>
 					<h2>Age Bracket: {formData?.age}</h2>
 					<h2>Age Bracket: {formData?.juniorAge}</h2>
-					<h4>
+					<h4 className="d-flex">
 						Skills:{' '}
 						{formData?.juniorSkill.map((s, index) => (
 							<div key={index}>{s},</div>
